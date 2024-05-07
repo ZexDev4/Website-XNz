@@ -16,5 +16,5 @@ def download_tiktok():
             "code": 404,
             "message": "Masukkan parameter URL"
 	})
-    response = requests.post('https://api.tikmate.app/api/lookup', data={'url': url}).json()
+    response = requests.post('https://api.tikmate.app/api/lookup', data={'url': url}).text
     return jsonify({response})
